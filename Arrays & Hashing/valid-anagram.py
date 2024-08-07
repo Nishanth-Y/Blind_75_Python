@@ -1,9 +1,5 @@
-from collections import Counter
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        # return sorted(s) == sorted(t)
-        # return Counter(s) == Counter(t)
-
         if len(s) != len(t):
             return False
         
@@ -15,5 +11,4 @@ class Solution:
         for c in range(len(s)):
             if countS.get(s[c], 0) != countT.get(s[c], 0):
                 return False
-            
         return True
